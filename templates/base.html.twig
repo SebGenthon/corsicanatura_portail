@@ -1,0 +1,187 @@
+<div class="base lazy background" data-src="{{ asset("img/background.jpg") }}">
+    <div class="haut">
+        <a href="https://gc.synxis.com/rez.aspx?Hotel=63622&Chain=5154&template=RES_ROUGEMENT_V1&shell=RES_ROUGEMENT_V1&locale=fr-FR&src=rougemont&_ga=2.192068330.1575028940.1552404627-1241374183.1552404627" class="btn">RESERVER</a>
+        <div class="logo">
+            <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
+
+        </div>
+        <a href="tel:+41(0)269210101" class="tel">+41 (0)2 69 21 01 01</a>
+    </div>
+    <div class="text">
+
+        <div class="title">
+            HOTEL DE ROUGEMENT
+        </div>
+        <div class="description">
+            Garde la fenêtre de ton esprit ouvert, c'est par la que tu vois le monde
+        </div>
+        <div class="description">
+            Site en construction...
+        </div>
+
+
+    </div>
+
+
+
+
+{#  <div class="limit">
+        <h1>Site installé !</h1>
+        <h2>Que faire maintenant ?</h2>
+        <ul>
+            <li>1. Désinstallez "base.html.twig" dans "home.html.twig"</li>
+            <li>2. Supprimez "base.html.twig"</li>
+            <li>3. Connectez-vous sur l'administrateur</li>
+            <li>
+                4. Créez votre première zone
+                <ul>
+                    <li>A. Dossier "public" -> new directory "zones" -> new file -> .less</li>
+                    <li>B. Dossier "templates" -> new directory "zones" -> new file -> name.html.twig</li>
+                    <li>C. Administration -> se connecter -> Types de zones -> Créer un type de zone
+                        <ul>
+                            <li>Name : name.html.twig</li>
+                            <li>Title : ce que vous voulez</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>5. Soyez créatifs ! ( <a href="http://codex.ecnept.com/" target="_BLANK">Templates gratuits par ici</a> )</li>
+        </ul>
+    </div>
+
+
+#}
+
+<style>
+    body{
+        margin: 0;
+    }
+    .base{
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .base .haut{
+        display: flex;
+        justify-content: space-between;
+    }
+    .base .haut .btn{
+        color: white;
+        padding: 50px;
+        font-size: 20px;
+
+    }
+    .base .haut .tel{
+        color: white;
+        padding: 50px;
+        font-size: 20px;
+    }
+    .base .haut .logo img{
+        width: 120px;
+    }
+
+    .base .text{
+        padding: 50px;
+    }
+    .base .text .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 45px;
+        color: white;
+        letter-spacing: 8px;
+    }
+    .base .text .description{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+    }
+
+    @media (max-width: 450px) {
+        .base .haut{
+            flex-direction: column;
+        }
+        .base .haut .logo{
+            order: 3;
+            margin : auto;
+        }
+        .base .haut .btn, .base .haut .tel{
+            padding: 20px 50px;
+        }
+        .base .text{
+            padding: 20px;
+        }
+        .base .text .title{
+            padding-top: 20px;
+            font-size: 25px;
+        }
+        .base .text .description{
+            font-size: 20px;
+            padding-top: 20px;
+        }
+
+    }
+
+</style>
+
+
+
+    {#
+     .base
+    {
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height:100vh;
+        z-index: 99;
+        background: #302f2f;
+    }
+    .base .limit
+    {
+        margin:0 auto;
+        max-width: 1200px;
+        padding:5rem;
+        border:2px orange solid;
+        background:white;
+        color:orange;
+        z-index: 99;
+    }
+    h1
+    {
+        font-weight: bold;
+        font-size:4rem;
+        line-height: 3rem;
+    }
+    h2
+    {
+        font-size:2rem;
+        font-weight: lighter;
+        padding-bottom:2rem;
+    }
+
+    ul
+    {
+        color:black;
+    }
+
+    ul li ul
+    {
+        padding-left:2rem;
+    }
+
+    ul a
+    {
+        font-weight: bold;
+    }
+
+    ul a:hover
+    {
+        color:orange;
+    }
+
+</style>
+    #}

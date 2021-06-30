@@ -1,0 +1,52 @@
+
+header {
+  display: flex;
+  background-color: transparent;
+  height: 70px;
+  width: 100%;
+  z-index: 99;
+  justify-content: space-between;
+  position: fixed;
+
+  .logo {
+    margin: 20px;
+    justify-content: center;
+    img{
+      width: 120px;
+    }
+  }
+
+  .lienmenu{
+    color: white;
+    padding: 25px 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+    a{
+      padding-bottom: 10px;
+      i{
+        font-size: 25px
+      }
+      color : white;
+    }
+
+  }
+
+}
+
+
+@media all and (max-width:600px) {
+  header {
+    .logo {
+
+    }
+    .lienmenu{
+      font-size: 14px;
+      padding: 20px;
+      span{
+        display: none;
+      }
+    }
+  }
+}
