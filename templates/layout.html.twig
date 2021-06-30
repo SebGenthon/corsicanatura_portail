@@ -11,10 +11,6 @@
 
         gtag('config', '{{ infos.analyticsId }}');
     </script>
-
-    <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="ad803e9ce88819d8f6d27bd6d7b805f7"></script>
-
-
     <meta charset="utf-8"/>
     <title>{{ (page.detail(locale).metaTitle is null) ? (page.detail(locale).title ?? page.detail(locale).name ~ ' | ' ~ infos.name ~' - ' ~infos.city) : page.detail(locale).metaTitle  }}</title>
     <meta name="Description" content="{{ getFirstText(page,locale) | striptags | raw }}"/>
