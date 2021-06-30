@@ -1383,25 +1383,27 @@ header {
   position: fixed;
 }
 header .logo {
+  margin: 20px;
   justify-content: center;
 }
 header .logo img {
   width: 120px;
 }
 header .lienmenu {
+  color: white;
   padding: 25px 50px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 header .lienmenu a {
+  padding-bottom: 10px;
   color: white;
 }
 header .lienmenu a i {
   font-size: 25px;
 }
 @media all and (max-width: 600px) {
-  header .logo img {
-    width: 60px;
-  }
   header .lienmenu {
     font-size: 14px;
     padding: 20px;
@@ -1426,14 +1428,13 @@ header .lienmenu a i {
   height: 100%;
 }
 .zone.diapo_top .content .title {
-  margin-top: 30px;
+  margin: 30px 50px 50px 30px;
   line-height: 1;
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 8px;
   text-align: center;
   color: white;
   text-transform: uppercase;
-  margin-bottom: 50px;
 }
 .zone.diapo_top .content .desc {
   position: relative;
