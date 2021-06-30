@@ -9,7 +9,10 @@ header {
   position: fixed;
 
   .logo {
+    flex: 1;
     margin: 20px;
+    justify-content: center;
+    display: flex;
     justify-content: center;
     img{
       width: 150px;
@@ -18,36 +21,46 @@ header {
 
 
   .lienmenu{
+    flex: 2;
     color: white;
     padding: 25px 50px;
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
-
     a{
-      padding-bottom: 10px;
+      padding: 10px;
       i{
         font-size: 25px
       }
       color : white;
     }
-
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
   }
 
 }
 
 
-@media all and (max-width:600px) {
+@media all and (max-width:800px) {
   header {
     .logo {
 
     }
+
     .lienmenu{
+
       font-size: 14px;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
       span{
         display: none;
       }
+    }
+    .socials{
+      flex-direction: column;
     }
   }
 }

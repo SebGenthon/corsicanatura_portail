@@ -1383,33 +1383,45 @@ header {
   position: fixed;
 }
 header .logo {
+  flex: 1;
   margin: 20px;
+  display: flex;
   justify-content: center;
 }
 header .logo img {
   width: 150px;
 }
 header .lienmenu {
+  flex: 2;
   color: white;
   padding: 25px 50px;
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
 }
 header .lienmenu a {
-  padding-bottom: 10px;
+  padding: 10px;
   color: white;
 }
 header .lienmenu a i {
   font-size: 25px;
 }
-@media all and (max-width: 600px) {
+header .lienmenu:first-child {
+  text-align: left;
+}
+header .lienmenu:last-child {
+  text-align: right;
+}
+@media all and (max-width: 800px) {
   header .lienmenu {
     font-size: 14px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   header .lienmenu span {
     display: none;
+  }
+  header .socials {
+    flex-direction: column;
   }
 }
 .zone.diapo_top {
@@ -1478,7 +1490,7 @@ header .lienmenu a i {
   margin-left: auto;
   margin-right: 10px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .zone.diapo_top .content .title {
     font-size: 24px;
     letter-spacing: 4px;
