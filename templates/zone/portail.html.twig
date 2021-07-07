@@ -1,0 +1,46 @@
+<div class="portail">
+    <div class="limit">
+        <div class="phones">
+            <div class="phone">
+                <a href="tel:{{ infos.tel }}">{{ infos.tel }}</a>
+            </div>
+            <div class="phone">
+                <a href="tel:{{ infos.mobile }}">{{ infos.mobile }}</a>
+            </div>
+
+
+        </div>
+        <div class="logo hidden vert">
+            <img src="{{ asset('img/logo_vert.png') | thumbnail(220) }}"/>
+        </div>
+        <div class="logo hidden orange">
+            <img src="{{ asset('img/logo_orange.png') | thumbnail(220) }}"/>
+        </div>
+
+        <div class="first_website">
+            {% for photo in zone.photos | slice(0,1) %}
+                <a href="{{ photo.detail(locale).description }}"></a>
+                <div class="image" data-id="{{ photo.id }}">
+                    <img src="{{ path('generatePhoto',{'id':photo.id,'width':1000}) }}" alt="{{ photo.detail(locale).title }}">
+                </div>
+                <h2 class="text">{{ zone.detail(locale).description | raw }}</h2>
+                <h1>{{ zone.detail(locale).title }}</h1>
+            {% endfor %}
+
+
+        </div>
+
+        <div class="second_website">
+            {% for photo in zone.photos | slice(1,1) %}
+                <a href="{{ photo.detail(locale).description }}"></a>
+                <div class="image" data-id="{{ photo.id }}">
+                    <img src="{{ path('generatePhoto',{'id':photo.id,'width':1000}) }}" alt="{{ photo.detail(locale).title }}">
+                </div>
+                <h2 class="text">{{ zone.detail(locale).description2 | raw}}</h2>
+                <h1>{{ zone.detail(locale).title2 }}</h1>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>

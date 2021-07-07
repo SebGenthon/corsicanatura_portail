@@ -1,0 +1,209 @@
+.portail
+{
+  .limit
+  {
+    display: flex;
+    height: 100vh;
+
+    .phones
+    {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      padding:1rem;
+      color:white;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 999;
+
+      .phone{
+        background: rgba(0,0,0,.5);
+        padding: 20px;
+        margin: 5px;
+        a
+        {
+          font-size: 24px;
+          color:white;
+          margin:0 1rem;
+        }
+
+      }
+
+
+    }
+
+    .logo
+    {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+      transition: 500ms all ease-out;
+      &.hidden {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+    }
+
+    .first_website,.second_website
+    {
+      flex:1;
+      justify-content: flex-end;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+
+      &:after
+      {
+        content:'';
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.5);
+        transition: .3s all;
+      }
+
+      &:hover
+      {
+        &:after
+        {
+          background: rgba(0,0,0,0.2);
+        }
+      }
+
+      a
+      {
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom: 0;
+        z-index: 3;
+      }
+
+      .image
+      {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        img
+        {
+          object-fit: cover;
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
+
+      h1
+      {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        color:white;
+        text-transform: uppercase;
+        font-size:2.5rem;
+        margin-bottom: 10rem;
+
+        &:after,&:before
+        {
+          content:'';
+
+          position: absolute;
+          bottom:-.5rem;
+          width:55%;
+          height:1px;
+          background: @primary;
+          transition:.3s all;
+        }
+        &:after
+        {
+          left:0;
+          bottom:-2rem;
+        }
+        &:before
+        {
+          right:0;
+          top:-2rem;
+        }
+      }
+      &:hover
+      {
+        h1
+        {
+          &:after,&:before
+          {
+            width:40%;
+          }
+        }
+      }
+      h2{
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        color:white;
+        text-transform: uppercase;
+        font-size:2rem;
+        margin-bottom: 10rem;
+      }
+    }
+
+
+    .second_website{
+      h1{
+        &:after,&:before
+        {
+          background: @secondary;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 900px)
+{
+  .portail
+  {
+    .limit
+    {
+      flex-direction: column;
+
+        .phones
+        {
+          justify-content: space-between;
+          width: 100%;
+
+          .phone
+          {
+            a
+            {
+              font-size: 1.6rem;
+              display: block;
+            }
+          }
+        }
+
+
+      h1
+      {
+        max-width: 80%;
+        text-align: center;
+      }
+
+      h2
+      {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
