@@ -1539,6 +1539,12 @@ a:hover {
   .portail .limit .phones .phone a:hover {
     color: #9bcc00;
   }
+  .portail .limit .phones .phone.orange {
+    border: 1px solid #f54a16;
+  }
+  .portail .limit .phones .phone.orange a:hover {
+    color: #f54a16;
+  }
   .portail .limit h1 {
     max-width: 80%;
     text-align: center;
