@@ -16,16 +16,31 @@
       display: flex;
       justify-content: flex-end;
       z-index: 999;
+      font-weight: bold;
 
       .phone{
-        background: rgba(0,0,0,.5);
-        padding: 20px;
+
+        //background: rgba(0,0,0,.5);
+        border: 1px solid @secondary;
+        padding: 10px 20px;
         margin: 5px;
         a
         {
           font-size: 24px;
           color:white;
           margin:0 1rem;
+          transition: 500ms all ease-out;
+          &:hover{
+            color: @secondary;
+          }
+        }
+        &.vert{
+          border: 1px solid @primary;
+          a{
+            &:hover{
+              color: @primary;
+            }
+          }
         }
 
       }

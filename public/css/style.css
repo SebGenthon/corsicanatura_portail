@@ -1379,16 +1379,27 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   z-index: 999;
+  font-weight: bold;
 }
 .portail .limit .phones .phone {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  border: 1px solid #f54a16;
+  padding: 10px 20px;
   margin: 5px;
 }
 .portail .limit .phones .phone a {
   font-size: 24px;
   color: white;
   margin: 0 1rem;
+  transition: 500ms all ease-out;
+}
+.portail .limit .phones .phone a:hover {
+  color: #f54a16;
+}
+.portail .limit .phones .phone.vert {
+  border: 1px solid #9bcc00;
+}
+.portail .limit .phones .phone.vert a:hover {
+  color: #9bcc00;
 }
 .portail .limit .logo {
   position: absolute;
