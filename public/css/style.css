@@ -1422,22 +1422,28 @@ a:hover {
   display: flex;
   position: relative;
   flex-direction: column;
-}
-.portail .limit .first_website:after,
-.portail .limit .second_website:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-  transition: 0.3s all;
-}
-.portail .limit .first_website:hover:after,
-.portail .limit .second_website:hover:after {
-  background: rgba(0, 0, 0, 0.2);
+  /*
+      &:after
+      {
+        content:'';
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.5);
+        transition: .3s all;
+      }
+      &:hover
+      {
+        &:after
+        {
+          background: rgba(0,0,0,0.2);
+        }
+      }
+
+       */
 }
 .portail .limit .first_website a,
 .portail .limit .second_website a {
@@ -1523,9 +1529,15 @@ a:hover {
     justify-content: space-between;
     width: 100%;
   }
+  .portail .limit .phones .phone {
+    border: 1px solid #9bcc00;
+  }
   .portail .limit .phones .phone a {
     font-size: 1.6rem;
     display: block;
+  }
+  .portail .limit .phones .phone a:hover {
+    color: #9bcc00;
   }
   .portail .limit h1 {
     max-width: 80%;
